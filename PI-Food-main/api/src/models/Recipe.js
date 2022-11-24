@@ -10,7 +10,7 @@ module.exports = (sequelize) => {
             primaryKey: true,   //identificador id
             allowNull: false//nunca puede ser nulo siempre requerido
         },
-        name: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false
         },
