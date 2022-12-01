@@ -1,4 +1,5 @@
 const {GetAllInfoRecipes, GeIdRecipesId} = require("./Utils");
+const {Recipe , Diet } = require("../db");
 
 const GetRecipe = async(req , res) =>{
 
@@ -12,7 +13,7 @@ const GetRecipe = async(req , res) =>{
             ? res.status(200).send(RecipeTitle) 
             : res.stauts(400).send("RECETA NO ENCONTRADA :C")
         }else{
-            res.status(200).send(RecipeTotal)
+            res.status(200).send(RecipeTotal);
         }
     }catch(error){
         res.stauts(400).send({errorMsg: error})
@@ -20,20 +21,54 @@ const GetRecipe = async(req , res) =>{
 
 }
 
-const GetRecipeID = async(req , res) =>{
+ const GetRecipeID = async(req , res) =>{
+
+     try{
+         const {id} = req.params
+         let recipeId = await GeIdRecipesId(id)
+         res.json(recipeId)
+     }catch(error){
+         res.stauts(500).send(error.message);
+     }
+
+ }
+
+ const CreatePostRecipe = async(req , res) =>{
+
+    //input = tipo de dato para recibir datos
 
     try{
-        const {id} = req.params
-        let recipeId = await GeIdRecipesId(id)
-        res.json(recipeId)
+
+        const {  title,  summary,  healthScore,  steps, image, diet } = req.body
+
+        let NewRecipe = await Recipe.create({
+
+            title,  
+            summary,  
+            healthScore,  
+            steps, 
+            image
+
+        })
+
+        let NewDiet = await Diet.findAll({where: {name: diet}}) 
+
+        NewRecipe.addDiet(NewDiet);
+
+        res.status(200).send("receta creada")
+
     }catch(error){
-        res.stauts(500).send(error.message);
+
+        console.log(error)
+
     }
 
-}
+ }
 
 module.exports = {
 
-    GetRecipe 
+    GetRecipe,
+    GetRecipeID, 
+    CreatePostRecipe,
 
 }

@@ -5,9 +5,11 @@ const  router  = require('express').Router();
 
 const RecipeRouter = require("./Recipe");
 
-//const DietsRouter = require("./Diet");
+const DietsRouter = require("./Diet");
 
 // Configurar los routers
+router.use("/", RecipeRouter);
+router.use("/", DietsRouter);
 // Ejemplo: router.use('/auth', authRouter);
 
 
