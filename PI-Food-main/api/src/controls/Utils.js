@@ -44,16 +44,15 @@ const  GetInfoDbRecipe = async () =>{
         }
     })
     return GetInfoDiet.map(recipe =>{
-      let type = recipe.diets.map(d =>d.title)
+      let type = recipe.diets.map(d =>d.name)
       return {id:recipe.id,
               title:recipe.title,
               healthScore:recipe.healthScore, 
               image: recipe.image||"https://images2.alphacoders.com/105/thumb-1920-1051199.png",
               diets: type,
-              score: recipe.spoonacularScore,  
-              dishTypes:recipe.dishTypes, 
-              sumary: recipe.sumary, 
-
+              score: recipe.spoonacularScore,
+              steps: recipe.steps, 
+              summary: recipe.summary, 
       }
     })
  };
