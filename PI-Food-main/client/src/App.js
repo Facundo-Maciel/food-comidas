@@ -1,6 +1,8 @@
 import './App.css';
 import {BrowserRouter,Route,Switch} from "react-router-dom";
 import ReturnLandingPage from "./componentes/LandingPage/LandingPage";
+import ReturnHome from './componentes/Home/Home';
+
 //BrowserRouter: hace que funcionen las rutas
 
 
@@ -10,6 +12,7 @@ function App() {
     <div className="App">
     <Switch>
     <Route exact path ="/"component={ReturnLandingPage}/>
+    <Route exact path ="/home"component={ReturnHome}/>
     </Switch>
     </div>
     </BrowserRouter>

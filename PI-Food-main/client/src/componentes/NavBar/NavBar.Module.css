@@ -1,0 +1,20 @@
+
+.divEstile{
+    display: flex;
+    height: 80px;
+    background-image: linear-gradient(to left, #5a5656aa, #dbdce3);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tituloEstile{
+    font-size: 50px;
+    text-shadow: 3px 3px 5px rgb(71, 71, 69);
+    font-family: fantasy;
+    text-decoration: none;
+    margin-left: 5px;
+
+}
+
+
+
