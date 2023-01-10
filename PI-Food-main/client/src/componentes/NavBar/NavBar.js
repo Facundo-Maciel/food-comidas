@@ -4,6 +4,7 @@ import Style from "../NavBar/NavBar.Module.css";
 
 //importamos componentes
 import SearchBar from "../SearchBar/SearchBar";
+import FilterButton from "../FilterButton/FilterButton";
 
 export default function NavBar(){
 
@@ -11,12 +12,18 @@ export default function NavBar(){
     //search
     return(
         <div className={Style.divEstile}>
+        
      
         <div >
-          
             <a className={Style.tituloEstile}>  <Link to="/"> FACU FOODS </Link> </a>  
-        
+            
         </div>
+
+        <div>
+            <FilterButton/>
+            
+         </div>
+
         <SearchBar /> 
         </div>
     )

@@ -15,6 +15,32 @@ export function GetRecipe(){
     })
   }
 
+}
+
+export function filterRecipesByTypeDiet (payload){
+  
+  return {
+      type : "FILTER_BY_TYPEDIET",
+      payload
+  }
+
+}
+
+export function TidyAlphabetically (payload){
+  
+  return {
+      type : "TIDY_ALPHABETICALLY",
+      payload
+  }
+
+}
+
+export function TidyScore (payload){
+  
+  return {
+      type : "TIDY_SCORE",
+      payload
+  }
 
 }
 

@@ -14,7 +14,7 @@ const {API_KEY2, API_KEY, API_KEY3, API_KEY4, API_KEY5,API_KEY6, API_KEY7} = pro
 //la funcion normal siempre lleva return
 //la funcion flecha se retorna siempre sin necesidad de un return
 const getApiInfoFood = async () => {
-    let UrlApi = (await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=10`)).data.results
+    let UrlApi = (await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=30`)).data.results
     const ApiInfo = UrlApi.map((info) =>{
         return {
             id: info.id,

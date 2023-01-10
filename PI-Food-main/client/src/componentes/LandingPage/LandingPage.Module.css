@@ -11,6 +11,7 @@
     text-shadow: 3px 3px 5px rgb(71, 71, 69);
     font-family: fantasy;
     background-image: linear-gradient(to left, #5a5656aa, #dbdce3);
+    box-shadow: 0 3px 13px 1px  rgb(52, 208, 247);
 }
 
 .button{
@@ -19,12 +20,14 @@
     /* border-radius: 50%;
     background-image: linear-gradient(to left, #830d0de0, #25c6b0); */
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 10%;
     font-style:  menu;
+    box-shadow: 1px 1px 10px rgb(52, 208, 247) ;
     background-size: 50% 50%;
     background-image: url("https://i.pinimg.com/originals/8e/92/dd/8e92dd394b49d057d4b68aa71ca960b7.gif");
     background-size: cover;
-    color: rgb(26, 3, 3);
+
+    color:rgb(187, 185, 161); 
     text-shadow:2px 2px 4px rgb(171, 171, 168);
     font-size: 30px;
     font-weight:bolder;
@@ -37,8 +40,7 @@
 
 .parrafo{
 
-    font-size: 38
-    px;
+    font-size: 40px;
     font-family: fantasy;
     line-height: 0;
     color: aliceblue;

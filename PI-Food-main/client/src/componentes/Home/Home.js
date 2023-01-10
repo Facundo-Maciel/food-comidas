@@ -26,26 +26,33 @@ function HandlerClick(){
 
     dispatch(GetRecipe())
 }
-
     return(
 
         <div>
-        
-        <NavBar/>
+            <div>
+                
+                <NavBar/>
+                
+            </div>
+
 
             <div>{
-                allRecipes ? allRecipes.map(info=>{
-                    return(
-                    <link>
-                     <Cards/>
-                    </link>
-                    )
-                }) : allRecipes
 
-            </div> }
+             allRecipes?allRecipes.map(info=>{
+            return(
 
+          <Cards title={info.title} image={info.image} diets={info.diets}/>
+
+            ) 
+
+             })
+                : <div>
+                        <h1> ERROR!</h1>
+                </div>
+
+                }
+
+            </div>
         </div>
-
-    )
-
+        )
 }
