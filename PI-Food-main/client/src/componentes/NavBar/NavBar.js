@@ -4,7 +4,7 @@ import Style from "../NavBar/NavBar.Module.css";
 
 //importamos componentes
 import SearchBar from "../SearchBar/SearchBar";
-import FilterButton from "../FilterButton/FilterButton";
+
 
 export default function NavBar(){
 
@@ -20,8 +20,7 @@ export default function NavBar(){
         </div>
 
         <div>
-            <FilterButton/>
-            
+                    
          </div>
 
         <SearchBar /> 

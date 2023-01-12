@@ -29,18 +29,18 @@ export function filterRecipesByTypeDiet (payload){
 export function TidyAlphabetically (payload){
   
   return {
-      type : "TIDY_ALPHABETICALLY",
+      type : "ORDER_BY_NAME",
       payload
   }
 
 }
 
-export function TidyScore (payload){
+// export function TidyScore (payload){
   
-  return {
-      type : "TIDY_SCORE",
-      payload
-  }
+//   return {
+//       type : 'TIDY_SCORE',
+//       payload
+//   }
 
-}
+// }
 
